@@ -1,10 +1,8 @@
 LDFLAGS = -lm -lpthread -lncurses
 
-snake: main.o snake.o snake.h
+snake: main.o snake.o
 	gcc -o snake main.o snake.o $(LDFLAGS) -I.
-main.o: main.c
-	gcc -c main.c $(LDFLAGS) -I.
-snake.o: snake.c
-	gcc -c snake.c $(LDFLAGS) -I.
-clean:
-	rm -f snake *.o
+main.o: src/main.c
+	gcc -c src/main.c $(LDFLAGS).
+snake.o: src/snake.c
+	gcc -c src/snake.c $(LDFLAGS).

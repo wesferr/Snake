@@ -5,7 +5,7 @@
 #include <time.h>
 #include <locale.h>
 #include <unistd.h>
-#include <snake.h>
+#include "snake.h"
 
 //Autoria no main.c
 
